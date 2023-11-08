@@ -1,0 +1,18 @@
+Sub StockAnalysis():
+
+Dim ws As Worksheet
+
+
+Dim ticker As String
+Dim tickerVolume As Long
+Dim tickerOpen As Single, tickerClose As Single
+
+ticker = Range("A2").Value
+tickerOpen = Range("C2").Value
+tickerClose = Range("F2").Value
+tickerVolume = Range("G2").Value
+
+PercentageChange = (tickerClose - tickerOpen) / tickerOpen * 100
+Range("K2").Value = PercentageChange
+
+End Sub
